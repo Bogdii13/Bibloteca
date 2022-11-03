@@ -7,11 +7,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Sas_Bogdan_Lab2.Data;
 using Sas_Bogdan_Lab2.Models;
-using Sas_Bogdan_Lab2.Models;
 
-namespace Sas_Bogdan_Lab2.Pages.Authors
+namespace Sas_Bogdan_Lab2.Pages.Categories
 {
-    public class CreateModel : BookCategoriesPageModel
+    public class CreateModel : PageModel
     {
         private readonly Sas_Bogdan_Lab2.Data.Sas_Bogdan_Lab2Context _context;
 
@@ -22,12 +21,11 @@ namespace Sas_Bogdan_Lab2.Pages.Authors
 
         public IActionResult OnGet()
         {
-
             return Page();
         }
 
         [BindProperty]
-        public Author Author { get; set; }
+        public Category Category { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -38,7 +36,7 @@ namespace Sas_Bogdan_Lab2.Pages.Authors
                 return Page();
             }
 
-            _context.Author.Add(Author);
+            _context.Category.Add(Category);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
