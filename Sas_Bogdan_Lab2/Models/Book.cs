@@ -35,5 +35,9 @@ namespace Sas_Bogdan_Lab2.Models
 
         public ICollection<BookCategory>? BookCategories { get; set; }
 
+
+        public int? MemberID { get; set; }
+        public Member? Member { get; set; }
+
     }
 }

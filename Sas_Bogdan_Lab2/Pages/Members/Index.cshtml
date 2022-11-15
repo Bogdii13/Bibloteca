@@ -1,0 +1,46 @@
+﻿@page
+@model Sas_Bogdan_Lab2.Pages.Members.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Borrowing[0].Member)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Borrowing[0].Book)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Borrowing[0].ReturnDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Borrowing) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Member.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Book.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReturnDate)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
