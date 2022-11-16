@@ -12,8 +12,8 @@ using Sas_Bogdan_Lab2.Data;
 namespace Sas_Bogdan_Lab2.Migrations
 {
     [DbContext(typeof(Sas_Bogdan_Lab2Context))]
-    [Migration("20221103130654_BookCateg")]
-    partial class BookCateg
+    [Migration("20221116103300_Borrowings")]
+    partial class Borrowings
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

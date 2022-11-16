@@ -16,6 +16,8 @@
                 <a class="navbar-brand" asp-area="" asp-page="/Authors/Index">Authors</a>
                 <a class="navbar-brand" asp-area="" asp-page="/Publishers/Index">Publishers</a>
                 <a class="navbar-brand" asp-area="" asp-page="/Categories/Index">Categories</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Members/Index">Members</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Borrowings/Index">Borrowings</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,7 +30,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
+                        
                     </ul>
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
