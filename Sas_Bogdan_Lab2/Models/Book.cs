@@ -28,7 +28,7 @@ namespace Sas_Bogdan_Lab2.Models
         [DataType(DataType.Date)]
 
 
-        [DataType(DataType.Date)]
+        
         public DateTime PublishingDate { get; set; }
 
         public int? PublisherID { get; set; }
