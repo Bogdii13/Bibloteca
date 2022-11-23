@@ -12,6 +12,9 @@ builder.Services.AddRazorPages(options =>
     options.Conventions.AuthorizeFolder("/Books");
     options.Conventions.AllowAnonymousToPage("/Books/Index");
     options.Conventions.AllowAnonymousToPage("/Books/Details");
+    options.Conventions.AuthorizeFolder("/Members", "AdminPolicy");
+    options.Conventions.AuthorizeFolder("/Categories", "AdminPolicy");
+    options.Conventions.AuthorizeFolder("/Publishers", "AdminPolicy");
 });
 builder.Services.AddDbContext<Sas_Bogdan_Lab2Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Sas_Bogdan_Lab2Context") ?? throw new InvalidOperationException("Connection string 'Sas_Bogdan_Lab2Context' not found.")));
