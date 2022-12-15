@@ -12,7 +12,7 @@ namespace Sas_Bogdan_Lab2.Models
 
         public int ID { get; set; }
 
-
+        [Required, StringLength(150, MinimumLength = 3)]
         [Display(Name = "Book Title")]
         public string Title { get; set; }
 

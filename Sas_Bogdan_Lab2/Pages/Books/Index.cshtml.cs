@@ -12,7 +12,7 @@ using Sas_Bogdan_Lab2.Models;
 
 namespace Sas_Bogdan_Lab2.Pages.Books
 {
-    [Authorize(Roles = "Admin")]
+    
 
     public class IndexModel : PageModel
     {
